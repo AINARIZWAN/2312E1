@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script> function myfunc() {
+    var password = document.getElementById("pass").value;
+   
+    var regex = /^(?=.*\d)(?=.*[!@#$&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    var result = regex.test(password);
+
+    if(result == true)
+    {
+        text = "Input is Valid";
+    }
+    else
+    {
+        text = "Input is Invalid";
+    }
+    document.getElementById('output').innerHTML = text;
+}
+</script>
 <body>
     <h1>welcome p-arty</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nihil quasi natus fuga odit harum quod sunt eaque ea exercitationem, excepturi nulla, non ad ut obcaecati similique commodi voluptas. Doloribus.</p>
